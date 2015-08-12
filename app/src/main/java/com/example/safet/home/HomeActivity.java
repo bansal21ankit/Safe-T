@@ -2,17 +2,19 @@ package com.example.safet.home;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import com.example.safet.R;
+import com.example.safet.custom.SlidingTabLayout;
 import com.example.safet.launch.LaunchActivity;
 import com.example.safet.utils.Logger;
 import com.example.safet.utils.PrefsManager;
@@ -25,9 +27,20 @@ public final class HomeActivity extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        initDrawerToggleAnimation();
-        initDrawerActions();
-        initContent();
+        initToolbarAndTabs();
+        initDrawerToggle();
+        initDrawerAction();
+    }
+
+    private void initToolbarAndTabs() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.home_toolbar);
+        setSupportActionBar(toolbar);
+
+        ViewPager pager = (ViewPager) findViewById(R.id.home_pager);
+        pager.setAdapter(new HomeAdapter(getSupportFragmentManager()));
+
+        SlidingTabLayout slidingTab = (SlidingTabLayout) findViewById(R.id.home_sliding_tab);
+        slidingTab.setViewPager(pager);
     }
 
     /**
@@ -35,7 +48,7 @@ public final class HomeActivity extends AppCompatActivity implements View.OnClic
      * open or close drawer also attach a DrawerToggle with Drawer so that opening and closing
      * actions can animate the action bar icon.
      */
-    private void initDrawerToggleAnimation() {
+    private void initDrawerToggle() {
         // Attach DrawerToggle with DrawerLayout
         mDrawerLayout = (DrawerLayout) findViewById(R.id.home_drawer_layout);
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close);
@@ -64,7 +77,7 @@ public final class HomeActivity extends AppCompatActivity implements View.OnClic
         return super.onOptionsItemSelected(item);
     }
 
-    private void initDrawerActions() {
+    private void initDrawerAction() {
         findViewById(R.id.home_setting).setOnClickListener(this);
         findViewById(R.id.home_logout).setOnClickListener(this);
     }
@@ -86,11 +99,5 @@ public final class HomeActivity extends AppCompatActivity implements View.OnClic
     private void gotoLaunch() {
         startActivity(new Intent(this, LaunchActivity.class));
         finish();
-    }
-
-    private void initContent() {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.add(R.id.home_content, new HomeFragment(), HomeFragment.TAG);
-        transaction.commit();
     }
 }

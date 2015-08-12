@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:theme="@style/AppTheme.NoActionBar"
             android:name=".home.HomeActivity"
             android:label="@string/app_name" />
     </application>

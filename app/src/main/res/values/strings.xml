@@ -12,6 +12,7 @@
     <string name="launch_login">Login</string>
 
     <!-- Home Activity -->
+    <string name="home_contact_title">Contacts</string>
     <string name="home_add_saviour">Add Saviour</string>
     <string name="home_setting">Settings</string>
     <string name="home_logout">Logout</string>
