@@ -40,6 +40,7 @@ public final class HomeActivity extends AppCompatActivity implements View.OnClic
         pager.setAdapter(new HomeAdapter(getSupportFragmentManager()));
 
         SlidingTabLayout slidingTab = (SlidingTabLayout) findViewById(R.id.home_sliding_tab);
+        slidingTab.setDistributeEvenly(true);
         slidingTab.setViewPager(pager);
     }
 

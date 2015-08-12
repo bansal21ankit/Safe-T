@@ -12,10 +12,15 @@
     <string name="launch_login">Login</string>
 
     <!-- Home Activity -->
-    <string name="home_contact_title">Contacts</string>
-    <string name="home_add_saviour">Add Saviour</string>
     <string name="home_setting">Settings</string>
     <string name="home_logout">Logout</string>
+
+    <!-- Home Activity - Saviours -->
+    <string name="saviour_title">Saviours</string>
+    <string name="saviours_add">Add Saviour</string>
+
+    <!-- Home Activity - Incidents -->
+    <string name="incident_title">Incidents</string>
 
     <!-- Toast Messages -->
     <string name="msg_credentials_empty">Credentials can\'t be empty.</string>
