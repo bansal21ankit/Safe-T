@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Safe-T</string>
+    <string name="drawer_open">Open Drawer</string>
+    <string name="drawer_close">Close Drawer</string>
+
+    <!-- Launch Activity -->
+    <string name="launch_name">Name</string>
+    <string name="launch_phone">Phone</string>
+    <string name="launch_password">Password</string>
+    <string name="launch_confirm">Confirm password</string>
+    <string name="launch_register">Register</string>
+    <string name="launch_login">Login</string>
+
+    <!-- Home Activity -->
+    <string name="home_add_saviour">Add Saviour</string>
+    <string name="home_setting">Settings</string>
+    <string name="home_logout">Logout</string>
+
+    <!-- Toast Messages -->
+    <string name="msg_credentials_empty">Credentials can\'t be empty.</string>
+    <string name="msg_phone_invalid">Invalid phone number format.</string>
+    <string name="msg_password_confirm">Passwords don\'t match.</string>
+    <string name="msg_password_empty">Password can\'t be empty.</string>
+    <string name="msg_logout_success">Successfully logged out</string>
+</resources>
