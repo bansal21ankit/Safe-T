@@ -4,4 +4,9 @@
 
     <!-- Home Activity -->
     <dimen name="home_drawer">240dp</dimen>
+
+    <!-- Trigger Widget -->
+    <dimen name="widget_padding">8dp</dimen>
+    <dimen name="widget_height">60dp</dimen>
+    <dimen name="widget_width">80dp</dimen>
 </resources>

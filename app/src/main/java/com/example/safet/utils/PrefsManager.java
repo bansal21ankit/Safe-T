@@ -9,6 +9,7 @@ public final class PrefsManager {
     private static final String PREF_NAME = "SafeT.prefs";
     private static final String KEY_PHONE = "PhoneNumber";
     private static final String KEY_PASSWORD = "Password";
+    private static final String KEY_TRIGGER = "isTriggered";
     private static SharedPreferences mPrefs;
 
     /**
@@ -47,5 +48,22 @@ public final class PrefsManager {
         String phone = mPrefs.getString(KEY_PHONE, null);
         String password = mPrefs.getString(KEY_PASSWORD, null);
         return new String[]{phone, password};
+    }
+
+    /**
+     * @param isTriggered true if trigger is activated via widget to send panic events, false otherwise.
+     */
+    public static void setIsTriggered(boolean isTriggered) {
+        assertPrefFile();
+        SharedPreferences.Editor editor = mPrefs.edit();
+        editor.putBoolean(KEY_TRIGGER, isTriggered);
+        editor.apply();
+    }
+
+    /**
+     * @return true if trigger is active and sending panic events, false otherwise.
+     */
+    public static boolean isTriggered() {
+        return mPrefs.getBoolean(KEY_TRIGGER, false);
     }
 }

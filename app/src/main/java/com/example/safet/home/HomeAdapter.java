@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.example.safet.Application;
+import com.example.safet.saviour.SaviourFragment;
 
 final class HomeAdapter extends FragmentPagerAdapter {
     private final String[] mPageTitles;

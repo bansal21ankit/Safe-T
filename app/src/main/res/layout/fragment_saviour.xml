@@ -9,4 +9,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="@string/saviours_add" />
+
+    <TextView
+        android:id="@+id/saviour_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/saviour_empty"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/saviour_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/saviour_add"
+        android:layout_marginBottom="@dimen/activity_padding" />
 </RelativeLayout>

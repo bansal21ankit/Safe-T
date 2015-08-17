@@ -41,6 +41,12 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/home_trigger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_trigger" />
+
+            <Button
                 android:id="@+id/home_setting"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

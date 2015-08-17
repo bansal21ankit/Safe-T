@@ -12,12 +12,14 @@
     <string name="launch_login">Login</string>
 
     <!-- Home Activity -->
+    <string name="home_trigger">Trigger</string>
     <string name="home_setting">Settings</string>
     <string name="home_logout">Logout</string>
 
     <!-- Home Activity - Saviours -->
     <string name="saviour_title">Saviours</string>
     <string name="saviours_add">Add Saviour</string>
+    <string name="saviour_empty">No saviours added</string>
 
     <!-- Home Activity - Incidents -->
     <string name="incident_title">Incidents</string>
